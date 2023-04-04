@@ -14,4 +14,6 @@ scoreboard objectives add tpa_damageBlocked_temp dummy
 scoreboard objectives add tpa_combatCooldown dummy
 scoreboard objectives add tpa_inCombat dummy
 
+scoreboard objectives add tpa_sinceDeath minecraft.custom:minecraft.time_since_death
+
 scoreboard objectives add TICK dummy
