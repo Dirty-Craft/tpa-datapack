@@ -16,13 +16,13 @@ scoreboard players enable @a GoSpawn
 scoreboard players set @a TICK 1
 execute as @a if score @s tpa_tp_cooldown matches 1.. run scoreboard players operation @s tpa_tp_cooldown -= @s TICK
 
-execute as @a[scores={GoSpawn=1.., tpa_tp_cooldown=0, tpa_combatCooldown=0, tpa_standingStill_cooldown=0}] at @s run function tpa:go_spawn
+execute as @a[scores={GoSpawn=1.., tpa_tp_cooldown=..0, tpa_combatCooldown=..0, tpa_standingStill_cooldown=..0}] at @s run function tpa:go_spawn
 execute as @a[scores={GoSpawn=1.., tpa_tp_cooldown=1..}] run tellraw @s [{"text": "You are on teleportation cooldown", "color": "red"}]
 execute as @a[scores={GoSpawn=1.., tpa_combatCooldown=1..}] run tellraw @s [{"text": "You are on combat cooldown", "color": "red"}]
 execute as @a[scores={GoSpawn=1.., tpa_standingStill_cooldown=1..}] run tellraw @s [{"text": "You are on movement cooldown", "color": "red"}]
 
 
-execute as @a[scores={GoHome=1.., tpa_tp_cooldown=0, tpa_combatCooldown=0, tpa_standingStill_cooldown=0}] positioned 0 0 0 run function tpa:go_bed
+execute as @a[scores={GoHome=1.., tpa_tp_cooldown=..0, tpa_combatCooldown=..0, tpa_standingStill_cooldown=..0}] positioned 0 0 0 run function tpa:go_bed
 execute as @a[scores={GoHome=1.., tpa_tp_cooldown=1..}] run tellraw @s [{"text": "You are on teleportation cooldown", "color": "red"}]
 execute as @a[scores={GoHome=1.., tpa_combatCooldown=1..}] run tellraw @s [{"text": "You are on combat cooldown", "color": "red"}]
 execute as @a[scores={GoHome=1.., tpa_standingStill_cooldown=1..}] run tellraw @s [{"text": "You are on movement cooldown", "color": "red"}]
