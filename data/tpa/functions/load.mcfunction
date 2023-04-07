@@ -6,6 +6,7 @@ scoreboard objectives add GoHome trigger
 scoreboard objectives add GoSpawn trigger
 
 function tpa:in_combat/load
+function tpa:standing_still/load
 
 scoreboard objectives add tpa_sinceDeath minecraft.custom:minecraft.time_since_death
 

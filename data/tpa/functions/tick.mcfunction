@@ -1,6 +1,9 @@
 # Check if player is in combat
 function tpa:in_combat/in_combat
 
+# Check if player is standing still
+function tpa:standing_still/standing_stll
+
 # Store bed cords for scoretp
 execute as @a store result score @s scoretp_x run data get entity @s SpawnX
 execute as @a store result score @s scoretp_y run data get entity @s SpawnY
