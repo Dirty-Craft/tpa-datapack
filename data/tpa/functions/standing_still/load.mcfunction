@@ -6,4 +6,4 @@ scoreboard objectives add tpa_posx_temp dummy
 scoreboard objectives add tpa_posy_temp dummy
 scoreboard objectives add tpa_posz_temp dummy
 
-scoreboard objectives add tpa_standingStill_cooldown dummy
+scoreboard objectives add tpa_standingStill_cooldown dummy 0

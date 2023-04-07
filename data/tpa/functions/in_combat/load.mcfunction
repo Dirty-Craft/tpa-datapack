@@ -6,4 +6,4 @@ scoreboard objectives add tpa_damageTaken_temp dummy
 scoreboard objectives add tpa_damageDealt_temp dummy
 scoreboard objectives add tpa_damageBlocked_temp dummy
 
-scoreboard objectives add tpa_combatCooldown dummy
+scoreboard objectives add tpa_combatCooldown dummy 0
