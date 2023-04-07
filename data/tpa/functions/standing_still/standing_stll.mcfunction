@@ -16,8 +16,6 @@ execute as @a if score @s tpa_posz > @s tpa_posz_temp run scoreboard players set
 execute as @a if score @s tpa_posz < @s tpa_posz_temp run scoreboard players set @s tpa_standingStill_cooldown 200
 
 # Countdown the timer
-execute as @a if score @s tpa_standingStill_cooldown matches 1.. run scoreboard players set @s tpa_standingStill 0
-execute as @a if score @s tpa_standingStill_cooldown matches 0 run scoreboard players set @s tpa_standingStill 1
 execute as @a if score @s tpa_standingStill_cooldown matches 1.. run scoreboard players operation @s tpa_standingStill_cooldown -= @s TICK
 
 

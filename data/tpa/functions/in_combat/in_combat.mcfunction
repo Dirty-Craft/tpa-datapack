@@ -9,8 +9,6 @@ execute as @a if score @s tpa_damageDealt > @s tpa_damageDealt_temp run scoreboa
 execute as @a[scores={tpa_sinceDeath=0}] run scoreboard players set @s tpa_combatCooldown 0
 
 # Countdown the timer
-execute as @a if score @s tpa_combatCooldown matches 1.. run scoreboard players set @s tpa_inCombat 1
-execute as @a if score @s tpa_combatCooldown matches 0 run scoreboard players set @s tpa_inCombat 0
 execute as @a if score @s tpa_combatCooldown matches 1.. run scoreboard players operation @s tpa_combatCooldown -= @s TICK
 
 
