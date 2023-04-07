@@ -1,5 +1,7 @@
 tellraw @a [{"text":"TPA Datapack - by GoodGuyMahdi","bold":true,"color":"red"}]
 
+function _em:_init
+
 scoreboard objectives add GoHome trigger
 scoreboard objectives add GoSpawn trigger
 
