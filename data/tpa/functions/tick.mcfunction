@@ -9,7 +9,7 @@ execute as @a store result score @s scoretp_z run data get entity @s SpawnZ
 # Triggers
 scoreboard players enable @a GoHome
 scoreboard players enable @a GoSpawn
-execute as @a if score @s GoSpawn matches 1.. run function tpa:go_home
+execute as @a if score @s GoSpawn matches 1.. run function tpa:go_spawn
 execute as @a if score @s GoHome matches 1.. positioned 0 0 0 run function tpa:go_bed
 
 # Reset triggers
