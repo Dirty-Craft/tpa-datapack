@@ -4,7 +4,7 @@ function _em:_init
 
 scoreboard objectives add GoHome trigger
 scoreboard objectives add GoSpawn trigger
-scoreboard objectives add tpa_tp_cooldown dummy
+scoreboard objectives add tpa_tp_cooldown dummy 0
 
 function tpa:in_combat/load
 function tpa:standing_still/load
