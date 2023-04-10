@@ -9,7 +9,7 @@ execute as @s if score #customSpawn tpa_custom_spawn matches 0 run scoreboard pl
 execute as @s if score #customSpawn tpa_custom_spawn matches 0 run scoreboard players set #customSpawn tpa_spawn_posy 64
 execute as @s if score #customSpawn tpa_custom_spawn matches 0 run scoreboard players set #customSpawn tpa_spawn_posz 0
 
-summon minecraft:armor_stand 0 64 0 {Tags: ["spawnPos"], NoGravity: 1b, Invulnerable: 1b}
+summon minecraft:armor_stand 0 64 0 {Tags: ["spawnPos"], NoGravity: 1b, Invulnerable: 1b, Invisible: 1b}
 
 execute store result entity @e[tag=spawnPos, limit=1] Pos[0] double 1 run scoreboard players get #customSpawn tpa_spawn_posx
 execute store result entity @e[tag=spawnPos, limit=1] Pos[1] double 1 run scoreboard players get #customSpawn tpa_spawn_posy
