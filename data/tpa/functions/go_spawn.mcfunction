@@ -15,10 +15,6 @@ execute store result entity @e[tag=spawnPos, limit=1] Pos[0] double 1 run scoreb
 execute store result entity @e[tag=spawnPos, limit=1] Pos[1] double 1 run scoreboard players get #customSpawn tpa_spawn_posy
 execute store result entity @e[tag=spawnPos, limit=1] Pos[2] double 1 run scoreboard players get #customSpawn tpa_spawn_posz
 
-tellraw @a [{"score":{"name":"#customSpawn","objective":"tpa_spawn_posx"},"color":"red"}]
-tellraw @a [{"score":{"name":"#customSpawn","objective":"tpa_spawn_posy"},"color":"red"}]
-tellraw @a [{"score":{"name":"#customSpawn","objective":"tpa_spawn_posz"},"color":"red"}]
-
 tp @s @e[tag=spawnPos, limit=1]
 
 kill @e[tag=spawnPos]
