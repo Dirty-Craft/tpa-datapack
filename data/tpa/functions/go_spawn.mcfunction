@@ -9,8 +9,16 @@ execute as @s if score #customSpawn tpa_custom_spawn matches 0 run scoreboard pl
 execute as @s if score #customSpawn tpa_custom_spawn matches 0 run scoreboard players set #customSpawn tpa_spawn_posy 64
 execute as @s if score #customSpawn tpa_custom_spawn matches 0 run scoreboard players set #customSpawn tpa_spawn_posz 0
 
-execute store result score @s scoretp_x run scoreboard players get #customSpawn tpa_spawn_posx
-execute store result score @s scoretp_y run scoreboard players get #customSpawn tpa_spawn_posy
-execute store result score @s scoretp_z run scoreboard players get #customSpawn tpa_spawn_posz
+summon minecraft:armor_stand 0 64 0 {Tags: ["spawnPos"], NoGravity: 1b, Invulnerable: 1b}
 
-execute in minecraft:overworld run function em:scoretp
+execute store result entity @e[tag=spawnPos, limit=1] Pos[0] double 1 run scoreboard players get #customSpawn tpa_spawn_posx
+execute store result entity @e[tag=spawnPos, limit=1] Pos[1] double 1 run scoreboard players get #customSpawn tpa_spawn_posy
+execute store result entity @e[tag=spawnPos, limit=1] Pos[2] double 1 run scoreboard players get #customSpawn tpa_spawn_posz
+
+tellraw @a [{"score":{"name":"#customSpawn","objective":"tpa_spawn_posx"},"color":"red"}]
+tellraw @a [{"score":{"name":"#customSpawn","objective":"tpa_spawn_posy"},"color":"red"}]
+tellraw @a [{"score":{"name":"#customSpawn","objective":"tpa_spawn_posz"},"color":"red"}]
+
+tp @s @e[tag=spawnPos, limit=1]
+
+kill @e[tag=spawnPos]
